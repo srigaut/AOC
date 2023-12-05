@@ -51,13 +51,11 @@ def get_valid_numbers(database, i_line, n_start, n_end):
                 star_numbers.append(int(number.group()))
             else:
                 pass
-    print(star_numbers)
     if len(star_numbers) >= 2:
         for elem in star_numbers:
             mul_gear *= elem
     else:
         mul_gear = 0
-    print(mul_gear)
     return mul_gear
 
 i_line_part2 = 0
@@ -68,8 +66,6 @@ for line in enlarged_database:
     for star in stars:
         mul_gear = get_valid_numbers(enlarged_database, i_line_part2,
                                      star.start(), star.end())
-        print(mul_gear)
-        print(type(mul_gear))
         sum_gear += mul_gear
     i_line_part2 += 1
 

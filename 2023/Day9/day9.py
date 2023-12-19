@@ -21,3 +21,7 @@ def get_value(line):
 print(sum(map(get_value, dataset)))
 
 Timer.get_time(1)
+
+print(sum(get_value(line[::-1]) for line in dataset))
+
+Timer.get_time(2)
